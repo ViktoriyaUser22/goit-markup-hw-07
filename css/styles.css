@@ -1067,35 +1067,12 @@ address {
 }
 
 
-.point {
+.buttons__item {
     display: block;
 }
 
-.point:not(:last-child) {
+.buttons__item:not(:last-child) {
     margin-right: 8px;
-}
-
-.main {
-
-    width: 73px;
-    height: 38px;
-    border-color: transparent;
-    color: var(--primary-text-color);
-    background: #F5F4FA;
-    border-radius: 4px;
-
-    transition: color var(--trans-fast), background-color var(--trans-fast), box-shadow var(--trans-fast);
-    
-}
-
-.filter {
-
-    color: var(--primary-text-color);
-    background: #F5F4FA;
-    border-color: transparent;
-    border-radius: 4px;
-    
-    transition: color var(--trans-fast), background-color var(--trans-fast), box-shadow var(--trans-fast);
 }
 
 .main,
@@ -1106,7 +1083,21 @@ address {
     font-size: 16px;
     line-height: 1.62;
     cursor: pointer;
+
+    border-color: transparent;
+    color: var(--primary-text-color);
+    background: #F5F4FA;
+    border-radius: 4px;
     
+    transition: color var(--trans-fast), background-color var(--trans-fast), box-shadow var(--trans-fast);
+    
+}
+
+.filter.main {
+
+    width: 73px;
+    height: 38px;
+
 }
 
 .filter.web {
@@ -1129,16 +1120,6 @@ address {
     height: 38px;
 }
 
-
-
-.main:hover,
-.main:focus {
-    color: var(--secondary-color);
-    background: var(--accent-color);
-    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
-            0px 2px 2px rgba(0, 0, 0, 0.12);
-        border-radius: 4px;
-}
 
 .filter:hover,
 .filter:focus {
