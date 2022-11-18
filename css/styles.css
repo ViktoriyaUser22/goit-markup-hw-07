@@ -587,7 +587,11 @@ header {
     overflow: hidden;
 }
 
-.area {
+.advantage {
+    display: flex;
+}
+
+.advantage__area {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -597,17 +601,15 @@ header {
     background: #F5F4FA;
     border-radius: 4px;
 }
-.icons {
+.advantage__icon {
     display: block;
     width: 70px;
     height: 70px;
 }
 
-.adv {
-    display: flex;
-}
 
-.adv-title {
+
+.advantage__title {
 
     display: block;
     width: 270px;
@@ -621,11 +623,11 @@ header {
     color: var(--primary-text-color);
 }
 
-.adv-title:not(:last-child) {
-    margin-right: 30px;
+.advantage__title:not(:last-child) {
+     margin-right: 30px;
 }
 
-.tittle {
+.advantage__topic {
     width: 270px;
     margin-bottom: 10px;
     font-family: 'Roboto';
@@ -638,7 +640,7 @@ header {
     color: var(--primary-text-color);
 }
 
-.text {
+.advantage__text {
 
     font-weight: 400;
     width: 270px;
@@ -656,7 +658,7 @@ header {
 }
 
 
-.work-title {
+.our-work__title {
 
     text-align: center;
     height: 42px;
@@ -672,21 +674,21 @@ header {
     display: flex;
 }
 
-.item {
+.work__item {
     display: block;
 
 }
 
-.item:not(:last-child) {
+.work__item:not(:last-child) {
     margin-right: 30px;
 }
 
-.thumb {
+.work__thumb {
     position: relative;
     z-index: -1;
 }
 
-.overley {
+.work__overley {
     position: absolute;
     width: 100%;
     height: 70px;
@@ -698,7 +700,7 @@ header {
             
 }
 
-.overley > p {
+.work__overley > .work__text {
     text-align: center;
     
     font-weight: 700;
@@ -722,7 +724,7 @@ header {
 }
 
 
-.team-title {
+.team__title {
 
     text-align: center;
     height: 42px;
@@ -734,11 +736,11 @@ header {
 }
 
 
-.contcard {
+.team-member {
     display: flex;
 }
 
-.card {
+.team-member__item {
     display: block;
 
     background: #FFFFFF;
@@ -747,7 +749,7 @@ header {
     border-radius: 0px 0px 4px 4px;
 }
 
-.card:not(:last-child) {
+.team-member__item:not(:last-child) {
     margin-right: 30px;
 }
 
@@ -758,11 +760,11 @@ header {
 
 }
 
-.person {
+.team-member__person {
     padding: 30px;
 }
 
-.name {
+.team-member__name {
     text-align: center;
 
     margin-bottom: 10px;
@@ -771,7 +773,7 @@ header {
     line-height: 1.19;
 }
 
-.position {
+.team-member__position {
     text-align: center;
     font-size: 16px;
     line-height: 1.19;
@@ -781,7 +783,7 @@ header {
 }
 
 
-.social-links {
+.social {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -789,7 +791,7 @@ header {
     
 }
 
-.net {
+.social__link {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -803,8 +805,8 @@ header {
     
 }
 
-.net:hover,
-.net:focus {
+.social__link:hover,
+.social__link:focus {
      color: var(--secondary-color);
      background-color: var(--accent-color);
 }
