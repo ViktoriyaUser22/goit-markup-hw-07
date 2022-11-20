@@ -206,7 +206,7 @@ address {
     
     transition: background-color var(--trans-fast);
 
-        %:focus {
+        &:focus {
             background-color: #188CE8;
         }
 }

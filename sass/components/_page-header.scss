@@ -45,10 +45,10 @@ header {
             display: block;
     
         }
-    
-    &.nav-item:not(:first-child) {
+     & > .nav-item:not(:first-child) {
             margin-left: 50px;
         }
+    
 }
 
 
