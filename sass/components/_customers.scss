@@ -32,14 +32,15 @@
     border-radius: 4px;
 
     transition-property: color var(--trans-fast), border-color var(--trans-fast);
-
+    
+    &:hover,
+    &:focus {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+        }
 }
 
-.customers__link:hover,
-.customers__link:focus {
-    color: var(--accent-color);
-    border-color: var(--accent-color);
-}
+
 
 .customers__logo {
     fill: currentColor;

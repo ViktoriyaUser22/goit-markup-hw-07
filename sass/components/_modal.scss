@@ -36,12 +36,11 @@
 
     transition: transform var(--trans-fast);
 
+    .backdrop.is-hidden & {
+            transform: translate(-50%, -80%);
+    }
 }
 
-.backdrop.is-hidden .modalform {
-    transform: translate(-50%, -80%);
-
-}
 
 
 
@@ -65,12 +64,14 @@
 .iconmod {
     fill: #000000;
     transition: fill var(--trans-fast);
+
+    &:hover,
+    &:focus {
+            fill: var(--accent-color);
+    }
 }
 
-.iconmod:hover,
-.iconmod:focus {
-    fill: var(--accent-color);
-}
+
 
 .form-area {
     display: flex;
@@ -113,6 +114,11 @@
     border-radius: 4px;
     transition: border-color var(--trans-fast);
     outline: none;
+
+       &:hover,
+       &:focus {
+            border-color: var(--accent-color);
+        }
 }
 
 .inputicon {
@@ -121,17 +127,13 @@
     top: 14px;
     left: 12px;
     transition: fill var(--trans-fast);
+
+    .form-input:hover ~ &,
+    .form-input:focus ~ & {
+            fill: var(--accent-color);
+        }
 }
 
-.form-input:hover,
-.form-input:focus {
-    border-color: var(--accent-color);
-}
-
-.form-input:hover~.inputicon,
-.form-input:focus~.inputicon {
-    fill: var(--accent-color);
-}
 
 .comments {
     width: 448px;
@@ -145,6 +147,10 @@
     outline: none;
     transition: border-color var(--trans-fast);
 
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color);
+        }
 }
 
 .comments::placeholder {
@@ -156,10 +162,7 @@
     color: rgba(117, 117, 117, 0.5);
 }
 
-.comments:hover,
-.comments:focus {
-    border-color: var(--accent-color);
-}
+
 
 .form-agreement {
 
@@ -187,23 +190,25 @@
 .iconcheck {
     display: block;
     cursor: pointer;
+
+    & .unchecked {
+            opacity: 1;
+            transition: opasity var(--trans-fast);
+        }
+    
+    & .checked {
+            opacity: 0;
+            transition: opasity var(--trans-fast);
+        }
 }
 
-.iconcheck .unchecked {
-    opacity: 1;
-    transition: opasity var(--trans-fast);
-}
 
-.iconcheck .checked {
+
+.checkbox:checked + .iconcheck .unchecked {
     opacity: 0;
-    transition: opasity var(--trans-fast);
 }
 
-.checkbox:checked+.iconcheck .unchecked {
-    opacity: 0;
-}
-
-.checkbox:checked+.iconcheck .checked {
+.checkbox:checked + .iconcheck .checked {
     opacity: 1;
 }
 
@@ -245,8 +250,9 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     transition: background-coior var(--trans-fast);
+
+       &:focus {
+            background-color: #188CE8;
+        }
 }
 
-.send:focus {
-    background-color: #188CE8;
-}

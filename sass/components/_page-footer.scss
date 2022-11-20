@@ -48,16 +48,17 @@ address {
 
     transition: color var(--trans-fast);
 
+        &:not(:last-child) {
+            margin-bottom: 2px;
+        }
+    
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 }
 
-.link-touch:not(:last-child) {
-    margin-bottom: 2px;
-}
 
-.link-touch:hover,
-.link-touch:focus {
-    color: var(--accent-color);
-}
 
 .footer-first {
     color: var(--accent-color);
@@ -103,12 +104,12 @@ address {
 
     transition: background-color var(--trans-fast);
 
+        &:hover,
+        &:focus {
+            background-color: var(--accent-color);
+        }
 }
 
-.net-infooter:hover,
-.net-infooter:focus {
-    background-color: var(--accent-color);
-}
 
 .icon-infooter {
     fill: currentColor;
@@ -167,6 +168,11 @@ address {
     outline: none;
 
     transition: border-color var(--trans-fast);
+
+        &:hover,
+        &:focus {
+            border-color: var(--accent-color);
+        }
 }
 
 .inputmail::placeholder {
@@ -176,25 +182,6 @@ address {
     letter-spacing: 0.03em;
 
     color: rgba(255, 255, 255, 0.6);
-}
-
-.inputmail:hover,
-.inputmail:focus {
-    border-color: var(--accent-color);
-}
-
-.sub {
-    width: 200px;
-    height: 50px;
-    background-color: #2196F3;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 4px;
-
-    transition: background-color var(--trans-fast);
-}
-
-.sub:focus {
-    background-color: #188CE8;
 }
 
 .sub {
@@ -216,6 +203,12 @@ address {
     color: var(--secondary-color);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
+    
+    transition: background-color var(--trans-fast);
+
+        %:focus {
+            background-color: #188CE8;
+        }
 }
 
 .iconwing {

@@ -55,11 +55,12 @@
 
     text-transform: uppercase;
     color: var(--primary-text-color);
+
+    &:not(:last-child) {
+            margin-right: 30px;
+        }
 }
 
-.advantage__title:not(:last-child) {
-    margin-right: 30px;
-}
 
 .advantage__topic {
     width: 270px;

@@ -30,12 +30,6 @@ header {
 
 }
 
-
-.box .nav {
-    display: flex;
-
-}
-
 .first {
     color: var(--accent-color);
 }
@@ -44,15 +38,19 @@ header {
     color: #000000;
 }
 
+.nav {
+    display: flex;
 
-.nav>li {
-    display: block;
-
+    &.nav-item {
+            display: block;
+    
+        }
+    
+    &.nav-item:not(:first-child) {
+            margin-left: 50px;
+        }
 }
 
-.nav li:not(:first-child) {
-    margin-left: 50px;
-}
 
 .nav-link {
 
@@ -67,14 +65,12 @@ header {
 
     transition: color var(--trans-fast);
 
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 }
 
-
-
-.nav-link:hover,
-.nav-link:focus {
-    color: var(--accent-color);
-}
 
 .link.current {
     position: relative;
@@ -86,6 +82,10 @@ header {
 
     transition: color var(--trans-fast);
 
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 }
 
 .current::after {
@@ -101,12 +101,6 @@ header {
 
 }
 
-.link.current:hover,
-.link.current:focus {
-    color: var(--accent-color);
-}
-
-
 
 .link-header {
     display: flex;
@@ -116,12 +110,13 @@ header {
 
     transition: color var(--trans-fast);
 
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 }
 
-.link-header:hover,
-.link-header:focus {
-    color: var(--accent-color);
-}
+
 
 .icon-envelope {
     display: block;
@@ -133,6 +128,10 @@ header {
 
     transition: fill var(--trans-fast);
 
+        .link-header-mail:hover &,
+        .link-header-mail:focus & {
+            fill: var(--accent-color);
+        }
 }
 
 .icon-smartphone {
@@ -144,7 +143,10 @@ header {
 
     transition: fill var(--trans-fast);
 
-
+        .link-header-tel:hover &,
+        .link-header-tel:focus & {
+            fill: var(--accent-color);
+        }
 }
 
 .link-header-mail {
@@ -162,6 +164,10 @@ header {
 
     transition: color var(--trans-fast);
 
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 }
 
 .link-header-tel {
@@ -177,24 +183,12 @@ header {
 
     transition: color var(--trans-fast);
 
+        &:hover,
+        &:focus {
+            color: var(--accent-color);
+        }
 }
 
-.link-header-mail:hover,
-.link-header-mail:focus {
-    color: var(--accent-color);
-}
 
-.link-header-tel:hover,
-.link-header-tel:focus {
-    color: var(--accent-color);
-}
 
-.link-header-mail:hover .icon-envelope,
-.link-header-mail:focus .icon-envelope {
-    fill: var(--accent-color);
-}
 
-.link-header-tel:hover .icon-smartphone,
-.link-header-tel:focus .icon-smartphone {
-    fill: var(--accent-color);
-}

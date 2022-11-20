@@ -54,11 +54,10 @@
 
     transition: background-color var(--trans-fast);
 
+       &:hover,
+       &:focus {
+            background: linear-gradient(rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4));
+       }
 }
 
-.request:hover,
-.request:focus {
-    background: linear-gradient(rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4));
-
-}
